@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "test": "tap src/app.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "tap": "19.2.2",
+    "tsx": "4.12.0",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "@fastify/cors": "9.0.1",
+    "fastify": "4.27.0"
+  }
+}

@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+.first-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@layer setupPage;
+
+details {
+  border: 1px solid;
+  padding: 0 1rem;
+  background: white;
+}
+
+details[open] {
+  padding-bottom: 1em;
+}
+summary {
+  padding: 1rem 2em 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@layer setupPage {
+  :root {
+    font-size: 112.5%;
+    line-height: 1.5;
+  }
+  body {
+    background: #a4bacc99;
+    color: #226daa;
+    font-family: Raleway, sans-serif;
+    margin: 1rem;
+  }
+
+  aside {
+    width: 38em;
+    max-width: 98vw;
+  }
+}
+slot:not([name]) {
+  display: revert;
+}

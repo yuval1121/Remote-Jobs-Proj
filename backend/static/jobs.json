@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "command": "echo hello",
+    "sample": "1dfdsfsdf",
+    "user": "user1",
+    "group": "group1",
+    "status": "Running",
+    "date": "2022-01-01T00:00:00Z",
+    "completedDate": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "2",
+    "sample": "1dfdsfsdf",
+    "command": "echo world",
+    "user": "user2",
+    "group": "group2",
+    "status": "Running",
+    "date": "2022-01-01T00:00:00Z",
+    "completedDate": "2023-01-01T00:00:00Z"
+  }
+]
