@@ -48,6 +48,8 @@ jobs:
           npm ci &&
           npm run dev &
 
+      - run: cd frontend && npm install @rollup/rollup-linux-x64-gnu --save-optional
+
       - name: Cypress run
 
         uses: cypress-io/github-action@v6
