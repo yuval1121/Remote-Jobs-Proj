@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from "react";
-import "./JobCard.css";
 import { StatusText } from "./StatusText";
 import { JobItem } from "../types";
+import "./JobCard.css";
 
 type Props = {
   job: JobItem;

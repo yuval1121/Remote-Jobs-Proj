@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { JobCard } from "./components/JobCard";
 import { JobItem } from "./types";
+import "./App.css";
 
 function App() {
   const [data, setData] = useState<JobItem[]>([]);
