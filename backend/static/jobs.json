@@ -5,7 +5,7 @@
     "sample": "1dfdsfsdf",
     "user": "user1",
     "group": "group1",
-    "status": "Running",
+    "status": "Pending",
     "date": "2022-01-01T00:00:00Z",
     "completedDate": "2023-01-01T00:00:00Z"
   },
@@ -16,6 +16,36 @@
     "user": "user2",
     "group": "group2",
     "status": "Running",
+    "date": "2022-01-01T00:00:00Z",
+    "completedDate": ""
+  },
+  {
+    "id": "3",
+    "sample": "sdfsdf",
+    "command": "python /home/user/train.py",
+    "user": "user3",
+    "group": "group3",
+    "status": "Failed",
+    "date": "2022-01-01T00:00:00Z",
+    "completedDate": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "4",
+    "sample": "sdfsdf",
+    "command": "node script.js",
+    "user": "user4",
+    "group": "group4",
+    "status": "Terminated",
+    "date": "2022-01-01T00:00:00Z",
+    "completedDate": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "5",
+    "sample": "sdfsdf",
+    "command": "go run main.go",
+    "user": "user5",
+    "group": "group5",
+    "status": "Succeeded",
     "date": "2022-01-01T00:00:00Z",
     "completedDate": "2023-01-01T00:00:00Z"
   }
