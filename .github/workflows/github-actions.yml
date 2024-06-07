@@ -46,8 +46,7 @@ jobs:
         run: |
           cd backend &&
           npm ci &&
-          npm run dev &&
-          sleep 5
+          npm run dev &
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
