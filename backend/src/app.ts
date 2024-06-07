@@ -3,6 +3,7 @@ import jobs from "../static/jobs.json";
 import { JobItem } from "./types";
 import crypto from "crypto";
 import fastifyCors from "@fastify/cors";
+import { addJob, deleteJob, updateJob } from "./services/job.service";
 
 const fastify = Fastify({ logger: true });
 
@@ -15,9 +16,7 @@ fastify.get("/api/jobs", (_, reply) => {
 fastify.post<{ Body: JobItem }>("/api/jobs", (request, reply) => {
   const { body } = request;
 
-  const id = crypto.randomUUID();
-
-  jobs.push({ ...body, id });
+  const id = addJob(body);
 
   reply.send(id);
 });
@@ -27,14 +26,12 @@ fastify.put<{ Params: { id: string }; Body: Partial<JobItem> }>(
   (request, reply) => {
     const { id } = request.params;
     const { body } = request;
-    const job = jobs.find((job) => job.id === id);
 
-    if (!job) {
-      reply.status(404).send("Not found");
-      return;
+    try {
+      updateJob(id, body);
+    } catch {
+      return reply.status(404).send("Not found");
     }
-
-    Object.assign(job, body);
 
     reply.send(jobs);
   }
@@ -44,17 +41,16 @@ fastify.delete<{ Params: { id: string } }>(
   "/api/jobs/:id",
   (request, reply) => {
     const { id } = request.params;
-    const job = jobs.find((job) => job.id === id);
 
-    if (!job) {
-      reply.status(404).send();
-      return;
+    try {
+      deleteJob(id);
+    } catch {
+      return reply.status(404).send("Not found");
     }
-
-    jobs.splice(jobs.indexOf(job), 1);
 
     reply.send(jobs);
   }
 );
 
+export { jobs };
 export default fastify;
