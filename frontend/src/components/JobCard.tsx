@@ -1,16 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import "./JobCard.css";
-
-type JobItem = {
-  id: string;
-  command: string;
-  sample: string;
-  user: string;
-  group: string;
-  status: string;
-  date: string;
-  completedDate: string;
-};
+import { StatusText } from "./StatusText";
+import { JobItem } from "../types";
 
 type Props = {
   job: JobItem;
@@ -32,14 +23,14 @@ export const JobCard = ({ job }: Props) => {
       onClick={handleClick}
       key={id}
       className="job-item"
+      data-testid="job-card"
     >
-      <summary>Details</summary>
+      <summary> {command} </summary>
       <p className="jobs-details">
-        <span>{`User: ${user}`}</span>
+        <span data-testid="user-data">{`User: ${user}`}</span>
         <span>{`Group: ${group}`}</span>
-        <span>{`Status: ${status}`}</span>
-        <span>{`Date: ${new Date(date).toUTCString()}`}</span>
-        <span>{`Command: ${command}`}</span>
+        <StatusText status={status} />
+        <span>{`Date Started: ${new Date(date).toUTCString()}`}</span>
         <span>
           {`Completed Date: ${new Date(completedDate).toUTCString()}`}
         </span>

@@ -1,17 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { JobCard } from "./components/JobCard";
-
-export type JobItem = {
-  id: string;
-  command: string;
-  sample: string;
-  user: string;
-  group: string;
-  status: string;
-  date: string;
-  completedDate: string;
-};
+import { JobItem } from "./types";
 
 function App() {
   const [data, setData] = useState<JobItem[]>([]);
