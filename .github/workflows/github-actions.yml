@@ -49,6 +49,11 @@ jobs:
           npm run dev &
 
       - name: Cypress run
+
+        defaults:
+          run:
+            working-directory: ./frontend
+
         uses: cypress-io/github-action@v6
         with:
           start: npm run dev
