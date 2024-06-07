@@ -25,5 +25,5 @@ export const StatusText = ({ status }: Props) => {
     return <span style={{ color: getStatusColor() }}>{status}</span>;
   };
 
-  return <span>status: {renderStatusText()}</span>;
+  return <span>Status: {renderStatusText()}</span>;
 };
