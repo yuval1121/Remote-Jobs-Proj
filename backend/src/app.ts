@@ -15,18 +15,6 @@ fastify.get("/api/jobs", (_, reply) => {
 fastify.post<{ Body: JobItem }>("/api/jobs", (request, reply) => {
   const { body } = request;
 
-  // if (Array.isArray(body)) {
-  //   const ids: string[] = [];
-
-  //   for (const job of body) {
-  //     const id = crypto.randomUUID();
-
-  //     jobsData[id] = job;
-  //   }
-
-  //   return reply.send(ids);
-  // }
-
   const id = crypto.randomUUID();
 
   jobs.push({ ...body, id });
@@ -42,7 +30,7 @@ fastify.put<{ Params: { id: string }; Body: Partial<JobItem> }>(
     const job = jobs.find((job) => job.id === id);
 
     if (!job) {
-      reply.status(404).send();
+      reply.status(404).send("Not found");
       return;
     }
 
