@@ -1,13 +1,17 @@
 import Fastify from "fastify";
+import fastifyCors from "@fastify/cors";
+import fastifySwagger from "@fastify/swagger";
+import fastifySwaggerUi from "@fastify/swagger-ui";
 import jobs from "../static/jobs.json";
 import { JobItem } from "./types";
-import crypto from "crypto";
-import fastifyCors from "@fastify/cors";
 import { addJob, deleteJob, updateJob } from "./services/job.service";
+import { swaggerSpec } from "./utils/swagger";
 
 const fastify = Fastify({ logger: true });
 
 fastify.register(fastifyCors);
+fastify.register(fastifySwagger, swaggerSpec);
+fastify.register(fastifySwaggerUi, { routePrefix: "/docs" });
 
 fastify.get("/api/jobs", (_, reply) => {
   reply.send(jobs);

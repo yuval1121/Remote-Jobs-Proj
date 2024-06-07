@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@fastify/swagger": "8.14.0",
+    "@fastify/swagger-ui": "3.0.0",
     "@types/node": "20.14.2",
     "tap": "19.2.2",
     "tsx": "4.12.0",
