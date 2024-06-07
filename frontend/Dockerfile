@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM cypress/base:22.0.0
 
 WORKDIR /client
 
