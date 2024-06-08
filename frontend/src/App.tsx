@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(`http://${host}:3000/api/jobs`);
-      const data = (await res.json()) as JobItem[];
+      const data: JobItem[] = await res.json();
       setData(data);
     };
 

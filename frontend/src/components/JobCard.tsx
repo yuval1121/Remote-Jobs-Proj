@@ -8,8 +8,8 @@ type Props = {
 };
 
 export const JobCard = ({ job }: Props) => {
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const { id, user, group, status, date, command, completedDate, sample } = job;
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
   const handleClick = (e: SyntheticEvent<HTMLDetailsElement, Event>) => {
     e.preventDefault();
