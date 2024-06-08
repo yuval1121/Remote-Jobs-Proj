@@ -30,6 +30,11 @@ details {
 details[open] {
   padding-bottom: 1em;
 }
+
+details:not([open]):hover {
+  background-color: #a4bacc99;
+}
+
 summary {
   padding: 1rem 2em 1rem 0;
   font-size: 1.25rem;
