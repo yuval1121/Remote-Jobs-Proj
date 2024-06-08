@@ -51,7 +51,6 @@ export const swaggerSpec: SwaggerOptions = {
                 schema: {
                   type: "object",
                   properties: {
-                    id: { type: "string" },
                     command: { type: "string" },
                     sample: { type: "string" },
                     user: { type: "string" },
