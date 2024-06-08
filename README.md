@@ -23,7 +23,7 @@ Open browser and enter url: http://localhost:5173
 
 Open browser and enter url: http://localhost:3000/docs for swagger docs
 
-In order to see changes in the frontend you need to refresh the page after each non-GET request.
+In order to see changes in the frontend you need to refresh the page after every non-GET request.
 
 # Tests
 
