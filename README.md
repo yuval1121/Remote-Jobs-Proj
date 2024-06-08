@@ -1,6 +1,7 @@
 ## How To Use
 
-To run this application, you'll need Docker installed on your computer. From your command line:
+To run this application, you'll need Docker and Git installed on your computer. \
+ From your command line:
 
 ```bash
 # Clone this repository
@@ -22,11 +23,11 @@ Open browser and enter url: http://localhost:5173
 
 Open browser and enter url: http://localhost:3000/docs for swagger docs
 
+In order to see changes in the frontend you need to refresh the page after each non-GET request.
+
 # Tests
 
-Tests are available on CI pipeline and are visible in the [actions](https://github.com/yuval1121/Remote-Jobs-Proj/actions) tab of the repo.
-
-In order to run locally
+In order to run the tests locally
 
 ```bash
 # Go into the repository
@@ -41,15 +42,17 @@ $ npm test
 $ docker exec -it frontend sh
 $ npm test
 
-# To run E2E tests, first make the backend is running and then run
+# To run E2E tests, first make the backend is running and then run the following commands
 $ docker exec -it frontend sh
 $ npm run cy:run
 
 ```
 
+Tests are also available on CI pipeline and are visible in the [actions](https://github.com/yuval1121/Remote-Jobs-Proj/actions) tab of the repo.
+
 ## Endpoints
 
-GET http://localhost:3000/api/jobs
-POST http://localhost:3000/api/jobs
-PUT http://localhost:3000/api/jobs
+GET http://localhost:3000/api/jobs \
+POST http://localhost:3000/api/jobs \
+PUT http://localhost:3000/api/jobs \
 DELETE http://localhost:3000/api/jobs
