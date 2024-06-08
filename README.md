@@ -42,6 +42,10 @@ $ npm test
 $ docker exec -it frontend sh
 $ npm test
 
+# The E2E test will validate on the default data, if you need to reset the data just run
+$ docker-compose down
+$ docker-compose up -d
+
 # To run E2E tests, first make the backend is running and then run the following commands
 $ docker exec -it frontend sh
 $ npm run cy:run
