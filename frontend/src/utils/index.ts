@@ -1,3 +1,3 @@
-const isDocker = import.meta.env?.VITE_DOCKER_ENV;
+const isDocker = import.meta.env?.VITE_DOCKER_ENV === "true";
 
-export const host = isDocker ? "backend" : "localhost";
+export const host = isDocker && window.Cypress ? "backend" : "localhost";
