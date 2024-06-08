@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import fastify from "../app";
-import Tap, { test } from "tap";
+import { test } from "tap";
 import { JobItem } from "../types";
 
 test("Get all jobs", async (t) => {
