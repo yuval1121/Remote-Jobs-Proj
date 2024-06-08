@@ -1,3 +1,5 @@
+import { host } from "cypress/utils";
+
 describe("E2E Tests", () => {
   it("Basic Flow", () => {
     cy.visit("/");
@@ -25,7 +27,7 @@ describe("E2E Tests", () => {
     };
 
     // Add a new job
-    cy.request("POST", "http://backend:3000/api/jobs", object).then(
+    cy.request("POST", `http://${host}:3000/api/jobs`, object).then(
       ({ body: id }) => {
         cy.reload();
 
@@ -34,7 +36,7 @@ describe("E2E Tests", () => {
         cy.get("details").last().should("contain.text", object.command);
 
         // Update the new job
-        cy.request("PUT", `http://backend:3000/api/jobs/${id}`, {
+        cy.request("PUT", `http://${host}:3000/api/jobs/${id}`, {
           status: "Running",
         });
         cy.reload();
@@ -43,7 +45,7 @@ describe("E2E Tests", () => {
         cy.get("details").last().should("contain.text", "Running");
 
         // Delete the new job
-        cy.request("DELETE", `http://backend:3000/api/jobs/${id}`);
+        cy.request("DELETE", `http://${host}:3000/api/jobs/${id}`);
         cy.reload();
 
         // Check if the job is deleted

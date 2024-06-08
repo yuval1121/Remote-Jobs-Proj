@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { JobCard } from "./components/JobCard";
 import { JobItem } from "./types";
+import { host } from "./utils";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://backend:3000/api/jobs");
+      const res = await fetch(`http://${host}:3000/api/jobs`);
       const data = (await res.json()) as JobItem[];
       setData(data);
     };

@@ -24,7 +24,7 @@ Open browser and enter url: http://localhost:3000/docs for swagger docs
 
 # Tests
 
-Tests are available on CI pipeline and are visible in the actions tab of repo.
+Tests are available on CI pipeline and are visible in the [actions](https://github.com/yuval1121/Remote-Jobs-Proj/actions) tab of the repo.
 
 In order to run locally
 
