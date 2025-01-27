@@ -1,7 +1,7 @@
 ## How To Use
 
 To run this application, you'll need Docker and Git installed on your computer. \
- From your command line:c
+ From your command line:
 
 ```bash
 # Clone this repository
@@ -42,7 +42,7 @@ $ npm test
 $ docker exec -it frontend sh
 $ npm test
 
-# The E2E test will validate on the default data, if you need to reset the data just runf
+# The E2E test will validate on the default data, if you need to reset the data just run
 $ docker-compose down
 $ docker-compose up -d
 
