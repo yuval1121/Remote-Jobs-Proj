@@ -1,7 +1,7 @@
 ## How To Use
 
 To run this application, you'll need Docker and Git installed on your computer. \
- From your command line:
+ From your command line:c
 
 ```bash
 # Clone this repository
