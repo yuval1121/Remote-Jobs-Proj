@@ -42,7 +42,7 @@ $ npm test
 $ docker exec -it frontend sh
 $ npm test
 
-# The E2E test will validate on the default data, if you need to reset the data just run
+# The E2E test will validate on the default data, if you need to reset the data just runf
 $ docker-compose down
 $ docker-compose up -d
 
